@@ -3,7 +3,9 @@
     "allow": [
       "WebSearch",
       "Bash(mkdir:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(cat:*)",
+      "Bash(pnpm install:*)"
     ]
   }
 }

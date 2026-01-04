@@ -1,0 +1,36 @@
+{
+  "name": "editor-studio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@9.15.0",
+  "description": "AI-powered photo editor built with Vue3 and Rust WASM",
+  "scripts": {
+    "dev": "pnpm --filter frontend dev",
+    "build": "pnpm --filter frontend build",
+    "build:wasm": "cd packages/wasm-engine && wasm-pack build --target web --out-dir ../frontend/pkg",
+    "preview": "pnpm --filter frontend preview",
+    "lint": "oxlint",
+    "format": "oxlint --fix",
+    "check": "tsc --noEmit",
+    "check:frontend": "pnpm --filter frontend check"
+  },
+  "devDependencies": {
+    "oxfmt": "^0.21.0",
+    "oxlint": "^1.36.0",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=22",
+    "pnpm": ">=9"
+  },
+  "keywords": [
+    "photo-editor",
+    "ai",
+    "wasm",
+    "rust",
+    "vue",
+    "webgpu"
+  ],
+  "author": "Editor Studio"
+}
