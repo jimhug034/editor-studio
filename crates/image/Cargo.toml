@@ -1,0 +1,15 @@
+[package]
+name = "editor-studio-image"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+image.workspace = true
+editor-studio-params.workspace = true
+editor-studio-math.workspace = true
+
+[dev-dependencies]
+bytemuck.workspace = true

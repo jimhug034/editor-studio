@@ -5,7 +5,9 @@
       "Bash(mkdir:*)",
       "Bash(find:*)",
       "Bash(cat:*)",
-      "Bash(pnpm install:*)"
+      "Bash(pnpm install:*)",
+      "Bash(cargo check:*)",
+      "Bash(mv:*)"
     ]
   }
 }

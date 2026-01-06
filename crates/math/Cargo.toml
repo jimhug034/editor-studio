@@ -1,0 +1,10 @@
+[package]
+name = "editor-studio-math"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+editor-studio-params.workspace = true

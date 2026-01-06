@@ -1,0 +1,42 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/wasm",
+    "crates/renderer",
+    "crates/image",
+    "crates/math",
+    "crates/params",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["Editor Studio"]
+license = "MIT"
+repository = "https://github.com/editor-studio/editor-studio"
+
+[workspace.dependencies]
+# wgpu - 保留 webgl feature 用于浏览器兼容
+wgpu = { version = "0.20", features = ["webgl"] }
+
+# WASM 绑定
+wasm-bindgen = "0.2"
+js-sys = "0.3"
+web-sys = "0.3"
+console_error_panic_hook = "0.1"
+
+# 图像处理
+image = { version = "0.25", default-features = false, features = ["jpeg", "png", "webp"] }
+
+# 工具
+bytemuck = { version = "1.14", features = ["derive"] }
+
+# Workspace 内部依赖
+editor-studio-wasm = { path = "crates/wasm" }
+editor-studio-renderer = { path = "crates/renderer" }
+editor-studio-image = { path = "crates/image" }
+editor-studio-math = { path = "crates/math" }
+editor-studio-params = { path = "crates/params" }
+
+[workspace.metadata.wasm-pack.profile.release]
+wasm-opt = ['-Oz']

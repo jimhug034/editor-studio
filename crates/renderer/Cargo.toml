@@ -1,0 +1,19 @@
+[package]
+name = "editor-studio-renderer"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+wgpu.workspace = true
+wasm-bindgen.workspace = true
+js-sys.workspace = true
+web-sys.workspace = true
+bytemuck.workspace = true
+editor-studio-params.workspace = true
+editor-studio-math.workspace = true
+
+[build-dependencies]
+glob = "0.3"
